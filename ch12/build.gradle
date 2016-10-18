@@ -1,0 +1,49 @@
+/* Uncomment if this project CH12 need to be compile alone
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath (group: 'com.sahlbach.gradle', name: 'gradle-jetty-eclipse-plugin', version: '1.9.+')
+    }
+}
+
+ apply plugin: 'java'
+ apply plugin: 'groovy'
+ apply plugin: 'eclipse'
+ apply plugin: 'idea'
+ apply plugin: 'war'
+ apply plugin: 'jettyEclipse'
+
+ group = 'com.apress.isf'
+ version = '1.0'
+
+ repositories {
+	 mavenCentral()
+ }
+
+ dependencies {
+		compile 'org.codehaus.groovy:groovy-all:2.3.0'
+		compile 'org.aspectj:aspectjrt:1.7.4'
+		compile 'org.springframework:spring-context:4.0.5.RELEASE'
+		compile 'org.springframework:spring-jdbc:4.0.5.RELEASE'
+		compile 'org.springframework.boot:spring-boot-starter-web:1.1.1.RELEASE'
+		compile 'org.springframework:spring-webmvc:4.0.5.RELEASE'
+		compile 'com.thoughtworks.xstream:xstream:1.4.7'
+
+		runtime 'cglib:cglib:3.1'
+		runtime 'org.aspectj:aspectjweaver:1.7.4'
+		runtime 'hsqldb:hsqldb:1.8.0.10'
+
+		testCompile 'junit:junit:4.11'
+		testCompile 'org.springframework:spring-test:4.0.5.RELEASE'
+
+ }
+
+ test {
+	 testLogging {
+		 events 'started', 'passed'
+	 }
+ }
+
+ */

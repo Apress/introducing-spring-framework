@@ -1,0 +1,25 @@
+/* Uncomment if this project CH05 need to be compile alone
+ apply plugin: 'java'
+ apply plugin: 'groovy'
+ apply plugin: 'eclipse'
+ apply plugin: 'idea'
+
+ group = 'com.apress.isf'
+ version = '1.0'
+
+ repositories {
+	 mavenCentral()
+ }
+
+ dependencies {
+	 compile 'org.codehaus.groovy:groovy-all:2.3.0'
+	 compile 'org.springframework:spring-context:4.0.5.RELEASE'
+	 testCompile 'junit:junit:4.11'
+ }
+
+ test {
+	 testLogging {
+		 events 'started', 'passed'
+	 }
+ }
+ */

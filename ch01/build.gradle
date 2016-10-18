@@ -1,0 +1,36 @@
+/* Uncomment if this project CH02 need to be compile alone
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: "application"
+
+mainClassName = System.getProperty("mainClass")
+
+//Run the application with:  gradle run -DmainClass=com.apress.isf.spring.HelloWorldController
+
+group = 'com.apress.isf'
+version = '1.0'
+
+repositories {
+ 	mavenCentral()
+ 	maven {
+			url "http://repo.spring.io/libs-snapshot"
+			url 'http://repo.spring.io/milestone'
+			url 'http://repo.spring.io/libs-release'
+    }
+}
+
+dependencies {
+ 	compile 'org.codehaus.groovy:groovy-all:2.3.0'
+ 	compile 'org.springframework:spring-context:4.0.5.RELEASE'
+ 	compile 'org.springframework.boot:spring-boot-starter-web:1.1.1.RELEASE'
+ 	testCompile 'junit:junit:4.11'
+}
+
+test {
+ 	testLogging {
+	 	events 'started', 'passed'
+ 	}
+}
+ */

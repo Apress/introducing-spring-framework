@@ -1,0 +1,9 @@
+ch*/.project
+ch*/.settings/*
+ch*/.classpath
+ch*/.springBeans
+ch*/.gradle/*
+ch*/bin/*
+ch*/build/*
+.git*
+.gitignore
